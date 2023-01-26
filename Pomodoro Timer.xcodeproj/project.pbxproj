@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		501C6F732982A2170030F078 /* Pomodoro_TimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C6F722982A2170030F078 /* Pomodoro_TimerApp.swift */; };
-		501C6F752982A2170030F078 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C6F742982A2170030F078 /* ContentView.swift */; };
+		501C6F752982A2170030F078 /* RedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C6F742982A2170030F078 /* RedView.swift */; };
 		501C6F772982A21B0030F078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 501C6F762982A21B0030F078 /* Assets.xcassets */; };
 		501C6F7A2982A21B0030F078 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 501C6F792982A21B0030F078 /* Preview Assets.xcassets */; };
+		501C6F822982B91E0030F078 /* RedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C6F812982B91E0030F078 /* RedType.swift */; };
+		501C6F842982EF4C0030F078 /* ApplicationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C6F832982EF4C0030F078 /* ApplicationMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		501C6F6F2982A2170030F078 /* Pomodoro Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pomodoro Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		501C6F722982A2170030F078 /* Pomodoro_TimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pomodoro_TimerApp.swift; sourceTree = "<group>"; };
-		501C6F742982A2170030F078 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		501C6F742982A2170030F078 /* RedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedView.swift; sourceTree = "<group>"; };
 		501C6F762982A21B0030F078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		501C6F792982A21B0030F078 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		501C6F7B2982A21B0030F078 /* Pomodoro_Timer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pomodoro_Timer.entitlements; sourceTree = "<group>"; };
+		501C6F812982B91E0030F078 /* RedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedType.swift; sourceTree = "<group>"; };
+		501C6F832982EF4C0030F078 /* ApplicationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +56,10 @@
 		501C6F712982A2170030F078 /* Pomodoro Timer */ = {
 			isa = PBXGroup;
 			children = (
+				501C6F832982EF4C0030F078 /* ApplicationMenu.swift */,
 				501C6F722982A2170030F078 /* Pomodoro_TimerApp.swift */,
-				501C6F742982A2170030F078 /* ContentView.swift */,
+				501C6F742982A2170030F078 /* RedView.swift */,
+				501C6F812982B91E0030F078 /* RedType.swift */,
 				501C6F762982A21B0030F078 /* Assets.xcassets */,
 				501C6F7B2982A21B0030F078 /* Pomodoro_Timer.entitlements */,
 				501C6F782982A21B0030F078 /* Preview Content */,
@@ -139,7 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				501C6F752982A2170030F078 /* ContentView.swift in Sources */,
+				501C6F822982B91E0030F078 /* RedType.swift in Sources */,
+				501C6F842982EF4C0030F078 /* ApplicationMenu.swift in Sources */,
+				501C6F752982A2170030F078 /* RedView.swift in Sources */,
 				501C6F732982A2170030F078 /* Pomodoro_TimerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +280,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Pomodoro Timer/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,6 +306,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Pomodoro Timer/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
