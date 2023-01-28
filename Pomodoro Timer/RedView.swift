@@ -17,14 +17,14 @@ struct RedView: View {
     var body: some View {
         VStack {
             
-            HStack {
-                Text("Pomodoro Timer")
-                    .font(.largeTitle)
-                    .foregroundColor(toggle25 ? Color(.white) : skyBlue)
-            }
+//            HStack {
+//                Text("Pomodoro Timer")
+//                    .font(.largeTitle)
+//                    .foregroundColor(toggle25 ? Color(.white) : skyBlue)
+//            }
             
-            HStack(alignment: .center) {
-                Text("25 / 15 Pomodoro session")
+            VStack() {
+                Text("25 / 5")
                 
                 Toggle (
                     isOn: $toggle25,
@@ -33,10 +33,11 @@ struct RedView: View {
                 )
                 .toggleStyle(SwitchToggleStyle(tint: Color(.blue)))
             }
-            .frame(width: 250, height: 50)
+            .frame(width: 75, height: 50)
+            .offset(x: -50, y: 0.0)
                 
-            HStack(alignment: .center) {
-                Text("50 / 10 Pomodoro session")
+            VStack() {
+                Text("50 / 10")
                 
                 Toggle (
                     isOn: $toggle50,
@@ -45,8 +46,9 @@ struct RedView: View {
                 )
                 .toggleStyle(SwitchToggleStyle(tint: Color(.blue)))
             }
-            .frame(width: 250, height: 50)
-            Spacer()
+            .frame(width: 75, height: 50)
+            .offset(x:40, y: -57.5)
+            // Spacer()
         }
         .padding()
     }
@@ -55,7 +57,7 @@ struct RedView: View {
 struct RedView_Previews: PreviewProvider {
     static var previews: some View {
         RedView()
-            .frame(width: 275, height: 200)
+            .frame(width: 225, height: 150)
         
     }
 }

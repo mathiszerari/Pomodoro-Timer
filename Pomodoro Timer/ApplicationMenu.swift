@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import AppKit
 
 class ApplicationMenu: NSObject {
     let menu = NSMenu()
@@ -30,6 +31,8 @@ class ApplicationMenu: NSObject {
         
         return menu
     }
+    
+    
     
     @objc func about(sender: NSMenuItem) {
         NSApp.orderFrontStandardAboutPanel()
