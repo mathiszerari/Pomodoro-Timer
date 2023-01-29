@@ -9,46 +9,41 @@ import SwiftUI
 
 struct RedView: View {
     let skyBlue = Color(red: 0.4627, green: 0.8392, blue: 1.0)
+    let radius = 10
     @State private var fetching = false
     // @AppStorage("redType") var redType: RedSwitch = .twentyfive
     @State var toggle25 = false
     @State var toggle50 = false
     
     var body: some View {
-        VStack {
-            
-//            HStack {
-//                Text("Pomodoro Timer")
-//                    .font(.largeTitle)
-//                    .foregroundColor(toggle25 ? Color(.white) : skyBlue)
-//            }
-            
+        HStack {
+        
             VStack() {
-                Text("25 / 5")
-                
-                Toggle (
-                    isOn: $toggle25,
-                    label: {
-                    }
-                )
-                .toggleStyle(SwitchToggleStyle(tint: Color(.blue)))
+                Circle()
+                    .fill(toggle25 ? Color(.blue) : skyBlue)
+                    .frame(width: 100, height: 100)
+                    .overlay(Text("25 / 5")
+                        .foregroundColor(.white))
+                Circle()
+                    // permet d'indiquer à quel point est remplit la barre
+                    .trim(from: 0, to: 0.5)
+                    .stroke(Color.blue, lineWidth: CGFloat(radius))
+                    .frame(width: 90, height: 90)
+                    .rotationEffect(.degrees(-90))
+                    .offset(x: 0, y: -103.0)
             }
-            .frame(width: 75, height: 50)
-            .offset(x: -50, y: 0.0)
+            .offset(x: -5, y: 50.0)
+            .frame(width: 100, height: 100)
                 
             VStack() {
-                Text("50 / 10")
-                
-                Toggle (
-                    isOn: $toggle50,
-                    label: {
-                    }
-                )
-                .toggleStyle(SwitchToggleStyle(tint: Color(.blue)))
+                Circle()
+                    .fill(toggle25 ? Color(.blue) : skyBlue)
+                    .frame(width: 100, height: 100)
+                    .overlay(Text("50 / 10")
+                        .foregroundColor(.white))
             }
-            .frame(width: 75, height: 50)
-            .offset(x:40, y: -57.5)
-            // Spacer()
+            .offset(x: 5, y: 2.5)
+            .frame(width: 100, height: 100)
         }
         .padding()
     }
@@ -57,7 +52,6 @@ struct RedView: View {
 struct RedView_Previews: PreviewProvider {
     static var previews: some View {
         RedView()
-            .frame(width: 225, height: 150)
-        
+            .frame(width: 250, height: 150)
     }
 }
